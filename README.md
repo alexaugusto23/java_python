@@ -1,4 +1,7 @@
-:![Python](https://github.com/alexaugusto23/python_alura/blob/master/img/gifpython.gif):
+<p align="center">
+  <img width="660" height="500" src="https://github.com/alexaugusto23/python_alura/blob/master/img/gifpython.gif">
+</p>
+
 
 # Curso Alura - Python 3 parte 1: Introdução à nova versão da linguagem
 __Por: Alexsandro Augusto Ignácio e instrutor | Alura__
