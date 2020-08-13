@@ -1,6 +1,6 @@
-def jogar():
+import random
 
-    import random
+def jogar():
 
     numero_secreto = random.randrange(1,101)
     total_de_tentativas = 0
