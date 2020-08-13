@@ -12,7 +12,7 @@ __Por: Alexsandro Augusto Ignácio e instrutor | Alura__
 * Rode o seu código em qualquer lugar
 
 <p align="center">
-  <img width="360" height="300" src="https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif">
+  <img width="860" height="300" src="https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif">
 </p>
 
 
