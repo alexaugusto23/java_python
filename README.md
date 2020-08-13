@@ -1,4 +1,4 @@
-![]()
+![Python](https://github.com/alexaugusto23/python_alura/blob/master/img/gifpython.gif)
 
 # Curso Alura - Python 3 parte 1: Introdução à nova versão da linguagem
 __Por: Alexsandro Augusto Ignácio e instrutor | Alura__
@@ -8,7 +8,7 @@ __Por: Alexsandro Augusto Ignácio e instrutor | Alura__
 * Crie um jogo para aprender os recursos fundamentais do Python 3
 * Rode o seu código em qualquer lugar
 
-![]()
+![Loading](https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif)
 
 
 ### __Conhecimentos do curso__
