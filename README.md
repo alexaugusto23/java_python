@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="660" height="500" src="https://github.com/alexaugusto23/python_alura/blob/master/img/gifpython.gif">
+  <img width="360" height="300" src="https://github.com/alexaugusto23/python_alura/blob/master/img/gifpython.gif">
 </p>
 
 
@@ -11,7 +11,9 @@ __Por: Alexsandro Augusto Ignácio e instrutor | Alura__
 * Crie um jogo para aprender os recursos fundamentais do Python 3
 * Rode o seu código em qualquer lugar
 
-:![Loading](https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif):
+<p align="center">
+  <img width="360" height="300" src="https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif">
+</p>
 
 
 ### __Conhecimentos do curso__
