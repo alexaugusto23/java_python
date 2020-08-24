@@ -1,14 +1,17 @@
-def jogar():
+import random
 
+def jogar():
+    
     print("\n##################################")
     print("Bem vindos ao jogo da Forca!")
     print("\n##################################")
 
-    palavra_secreta = "banana"
+    palavra_secreta = "Claudia"
     letras_acertadas = []
 
     enforcou = False
     acertou = False
+    erros = 0 
 
     for i in palavra_secreta:
         letras_acertadas.append("_")
