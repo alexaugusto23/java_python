@@ -33,13 +33,14 @@ __Por: Alexsandro Augusto Ignácio e instrutor | Nico Steppat | Alura__
 
 ### __Conhecimentos do curso__
 
-* Preparando o jogo da forca Ver primeiro vídeo
+* Preparando o jogo da forca 
 * Manipulando strings
 * Conhecendo e trabalhando com listas
 * Conhecendo e trabalhando com tuplas
 * Implementando o encerramento do jogo
 * Escrita e leitura de arquivos
 * Melhorando o código e a apresentação
+
 
 <p align="center">
   <img width="660" height="180" src="https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif">
