@@ -42,5 +42,5 @@ __Por: Alexsandro Augusto Ignácio e instrutor | Nico Steppat | Alura__
 * Melhorando o código e a apresentação
 
 <p align="center">
-  <img width="660" height="100" src="https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif">
+  <img width="660" height="180" src="https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif">
 </p>
