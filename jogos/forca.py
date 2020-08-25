@@ -1,10 +1,8 @@
 import random
 
 def jogar():
-    
-    print("\n##################################")
-    print("Bem vindos ao jogo da Forca!")
-    print("\n##################################")
+
+    imprime_mensagem_de_abertura()
 
     arquivo = open("palavras.txt","r")
     palavras = []
@@ -62,3 +60,8 @@ def jogar():
 
 if (__name__ == "__main__"):
     jogar()
+
+def imprime_mensagem_de_abertura():
+    print("\n##################################")
+    print("Bem vindos ao jogo da Forca!")
+    print("\n##################################")
