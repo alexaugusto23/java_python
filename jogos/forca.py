@@ -4,35 +4,16 @@ def jogar():
 
     imprime_mensagem_de_abertura()
 
-    arquivo = open("palavras.txt","r")
-    palavras = []
+    palavra_secreta = carrega_palavra_secreta()
 
-    for linha in arquivo:
-        linha = linha.strip()
-        palavras.append(linha)
-
-    arquivo.close()
-    numero = random.randrange(0,len(palavras))
-
-
-    palavra_secreta = palavras[numero].upper()
-    letras_acertadas = ["_" for letra in palavra_secreta]
+    letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
 
     enforcou = False
     acertou = False
     erros = 0 
     tentativas = 6
 
-    print("Você deseja dicas ? \n")
-    dica = int(input("Sim 1 | Não 2: "))
-
-    if (dica == 1):
-        print("\nQuantidade de letras da palavra secreta! = ", len(palavra_secreta))
-        for i in letras_acertadas:
-            print(i, end = " ")
-        print("\n")
-    else:
-        print("\nContinue Jogando...\n")
+    input_dicas = dicas(palavra_secreta,letras_acertadas)
 
     while (not enforcou and not acertou):
         chute = input("Qual a letra: ")
@@ -58,10 +39,37 @@ def jogar():
 
     print("\nO Jogo Terminou !!!")
 
-if (__name__ == "__main__"):
-    jogar()
-
 def imprime_mensagem_de_abertura():
     print("\n##################################")
     print("Bem vindos ao jogo da Forca!")
     print("\n##################################")
+
+def carrega_palavra_secreta():
+    arquivo = open("palavras.txt","r")
+    palavras = []
+
+    for linha in arquivo:
+        linha = linha.strip()
+        palavras.append(linha)
+
+    arquivo.close()
+    numero = random.randrange(0,len(palavras))
+    palavra_secreta = palavras[numero].upper()
+    return palavra_secreta
+
+def inicializa_letras_acertadas(palavra):
+    return ["_" for letra in palavra]
+
+def dicas(palavra_secreta,letras_acertadas):
+    print("Você deseja dicas ? \n")
+    dica = int(input("Sim 1 | Não 2: "))
+    
+    if (dica == 1):
+        print("\nQuantidade de letras da palavra secreta! = ", len(palavra_secreta))
+        for i in letras_acertadas:
+            return print(i, end = " "), print("\n")
+    else:
+        return print("\nContinue Jogando...\n")
+
+if (__name__ == "__main__"):
+    jogar()
