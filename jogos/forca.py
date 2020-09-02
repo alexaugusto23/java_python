@@ -5,7 +5,6 @@ def jogar():
     imprime_mensagem_de_abertura()
 
     palavra_secreta = carrega_palavra_secreta()
-
     letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
 
     enforcou = False
