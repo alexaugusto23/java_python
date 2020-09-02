@@ -1,9 +1,9 @@
 # Bibliotecas
-
 import random
+import time
+import sys
 
 # Função principal
-
 def jogar():
 
     imprime_mensagem_de_abertura()
@@ -14,7 +14,7 @@ def jogar():
     enforcou = False
     acertou = False
     erros = 0 
-    tentativas = 6
+    tentativas = 7
     print("numero de tentativas",tentativas)
 
     input_dicas = dicas(palavra_secreta,letras_acertadas)
@@ -27,10 +27,12 @@ def jogar():
             marca_chute_correto(chute, letras_acertadas, palavra_secreta)
         else:
             erros += 1 
+            desenha_forca(erros)
+
         enforcou  = erros == tentativas
         acertou = "_" not in letras_acertadas
-        print(letras_acertadas)
-        print("jogando...")
+
+        jogando(letras_acertadas)
 
     if (acertou):
         imprime_msg_vencedor()
@@ -39,12 +41,75 @@ def jogar():
         imprime_msg_perdedor(palavra_secreta,tentativas) 
 
 # Funções do jogo --------------------------
+def jogando(letras_acertadas):
+    print(letras_acertadas)
+    print("\njogando...\n")
+
+def desenha_forca(erros):
+    print("  _______     ")
+    print(" |/      |    ")
+
+    if(erros == 1):
+        print(" |       _    ")
+        print(" |      (_)   ")
+        print(" |            ")
+        print(" |            ")
+        print(" |            ")
+
+    if(erros == 2):
+        print(" |       _    ")
+        print(" |      (_)   ")
+        print(" |      \     ")
+        print(" |            ")
+        print(" |            ")
+
+    if(erros == 3):
+        print(" |       _    ")
+        print(" |      (_)   ")
+        print(" |      \|    ")
+        print(" |            ")
+        print(" |            ")
+
+    if(erros == 4):
+        print(" |       _    ")
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |            ")
+        print(" |            ")
+
+    if(erros == 5):
+        print(" |       _    ")
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |            ")
+
+    if(erros == 6):
+        print(" |       _    ")
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |      /     ")
+
+    if (erros == 7):
+        print(" |       _    ")
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |      / \   ")
+
+    print(" |            ")
+    print("_|___         ")
+    print("_|___         ")
+    print()
 
 def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
      index = 0
      for letra in palavra_secreta:
         if(chute.upper() == letra.upper()):
+            print()
             letras_acertadas[index] = letra
+            print()
         index += 1
 
 def imprime_msg_vencedor():
@@ -119,6 +184,5 @@ def dicas(palavra_secreta,letras_acertadas):
         return print("\nContinue Jogando...\n")
 
 # Chama o arquivo como principal e não como import
-
 if (__name__ == "__main__"):
     jogar()
