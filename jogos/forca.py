@@ -1,4 +1,8 @@
+# Bibliotecas
+
 import random
+
+# Função principal
 
 def jogar():
 
@@ -14,16 +18,12 @@ def jogar():
 
     input_dicas = dicas(palavra_secreta,letras_acertadas)
 
+
     while (not enforcou and not acertou):
-        chute = input("Qual a letra: ")
-        chute = chute.strip().upper()
+        chute = pede_chute()
 
         if (chute in palavra_secreta):
-            index = 0
-            for letra in palavra_secreta:
-                if(chute.upper() == letra.upper()):
-                    letras_acertadas[index] = letra
-                index += 1
+            marca_chute_correto(chute, letras_acertadas, palavra_secreta)
         else:
             erros += 1 
         enforcou  = erros == tentativas
@@ -36,7 +36,19 @@ def jogar():
     else: 
         print("Você perdeu... \nAcabou o número de tentativas |{}| deste nível".format(tentativas))
 
-    print("\nO Jogo Terminou !!!")
+# Funções do jogo --------------------------
+
+def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
+     index = 0
+     for letra in palavra_secreta:
+        if(chute.upper() == letra.upper()):
+            letras_acertadas[index] = letra
+        index += 1
+
+def pede_chute():
+    chute = input("Qual a letra: ")
+    chute = chute.strip().upper()
+    return chute
 
 def imprime_mensagem_de_abertura():
     print("\n##################################")
@@ -69,6 +81,8 @@ def dicas(palavra_secreta,letras_acertadas):
             return print(i, end = " "), print("\n")
     else:
         return print("\nContinue Jogando...\n")
+
+# Chama o arquivo como principal e não como import
 
 if (__name__ == "__main__"):
     jogar()
