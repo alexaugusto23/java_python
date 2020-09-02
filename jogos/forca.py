@@ -43,7 +43,19 @@ def jogar():
 # Funções do jogo --------------------------
 def jogando(letras_acertadas):
     print(letras_acertadas)
-    print("\njogando...\n")
+
+    load = []
+
+    for i in range(0,4):
+        load.append(".")
+
+    print("\nJogando",end = " ")
+
+    for i in range(0,len(load)-1):
+        time.sleep(0.5)
+        print(load[i], end = " " )
+    print("\n")
+
 
 def desenha_forca(erros):
     print("  _______     ")
@@ -174,14 +186,24 @@ def inicializa_letras_acertadas(palavra):
 
 def dicas(palavra_secreta,letras_acertadas):
     print("Você deseja dicas ? \n")
-    dica = int(input("Sim 1 | Não 2: "))
-    
+    dica = int(input("Deseja continuar? 1 para Sim | 2 para Não\nDigite:")) 
+
     if (dica == 1):
         print("\nQuantidade de letras da palavra secreta! = ", len(palavra_secreta))
         for i in letras_acertadas:
             return print(i, end = " "), print("\n")
     else:
-        return print("\nContinue Jogando...\n")
+        load = []
+
+        for i in range(0,4):
+            load.append(".")
+
+        print("\nJogando",end = " ")
+
+        for i in range(0,len(load)-1):
+            time.sleep(0.5)
+            print(load[i], end = " " )
+        print("\n")
 
 # Chama o arquivo como principal e não como import
 if (__name__ == "__main__"):
