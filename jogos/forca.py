@@ -1,7 +1,7 @@
 # Bibliotecas
 import random
 import time
-import sys
+
 
 # Função principal
 def jogar():
@@ -52,10 +52,9 @@ def jogando(letras_acertadas):
     print("\nJogando",end = " ")
 
     for i in range(0,len(load)-1):
-        time.sleep(0.5)
+        time.sleep(0.3)
         print(load[i], end = " " )
     print("\n")
-
 
 def desenha_forca(erros):
     print("  _______     ")
@@ -201,7 +200,7 @@ def dicas(palavra_secreta,letras_acertadas):
         print("\nJogando",end = " ")
 
         for i in range(0,len(load)-1):
-            time.sleep(0.5)
+            time.sleep(0.3)
             print(load[i], end = " " )
         print("\n")
 
