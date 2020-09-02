@@ -41,6 +41,23 @@ __Por: Alexsandro Augusto Ignácio e instrutor | Nico Steppat | Alura__
 * Escrita e leitura de arquivos
 * Melhorando o código e a apresentação
 
+# Curso Alura - Python 3 parte 3: Introdução a Orientação a objetos
+__Por: Alexsandro Augusto Ignácio e instrutor | Nico Steppat | Alura__
+
+* Aprenda o paradigma OO com Python 3
+* Aplique Orientação a objetos com atributos, métodos e classes
+* Veja como usar propriedades
+* Entenda encapsulamento e coesão
+* Saiba quando deixar o seu método privado ou público
+
+### __Conhecimentos do curso__
+
+* O problema do paradigma procedural Ver primeiro vídeo
+* Classes e Objetos
+* Implementando Métodos
+* Encapsulamento
+* Usando Propriedades
+* Métodos privados e estáticos
 
 <p align="center">
   <img width="660" height="180" src="https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif">
