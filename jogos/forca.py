@@ -15,6 +15,7 @@ def jogar():
     acertou = False
     erros = 0 
     tentativas = 6
+    print("numero de tentativas",tentativas)
 
     input_dicas = dicas(palavra_secreta,letras_acertadas)
 
@@ -30,11 +31,12 @@ def jogar():
         acertou = "_" not in letras_acertadas
         print(letras_acertadas)
         print("jogando...")
-    
+
     if (acertou):
-        print("Você Ganhou!!!")
-    else: 
-        print("Você perdeu... \nAcabou o número de tentativas |{}| deste nível".format(tentativas))
+        imprime_msg_vencedor()
+
+    else:
+        imprime_msg_perdedor(palavra_secreta,tentativas) 
 
 # Funções do jogo --------------------------
 
@@ -44,6 +46,40 @@ def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
         if(chute.upper() == letra.upper()):
             letras_acertadas[index] = letra
         index += 1
+
+def imprime_msg_vencedor():
+    print("\nParabéns, você ganhou!")
+    print("       ___________      ")
+    print("        _________       ")
+    print("      '._==_==_=_.'     ")
+    print("      .-\\:      /-.    ")
+    print("     | (|:.     |) |    ")
+    print("      '-|:.     |-'     ")
+    print("        \\::.    /      ")
+    print("         '::. .'        ")
+    print("           ) (          ")
+    print("         _.' '._        ")
+    print("        '-------'       ")
+
+def imprime_msg_perdedor(palavra_secreta ,tentativas):
+    print("\nAcabou o número de tentativas |{}| deste nível. \nA palavra secreta era: {}".format(tentativas, palavra_secreta))
+    print("Você foi enforcado !!!")
+    print("     _______________         ")
+    print("    /               \       ")
+    print("   /                 \      ")
+    print("/\/                   \/\  ")
+    print("\ |   XXXX     XXXX   | /   ")
+    print(" \|   XXXX     XXXX   |/     ")
+    print("  |   XXX       XXX   |      ")
+    print("  |                   |      ")
+    print("  \__      XXX      __/     ")
+    print("    |\     XXX     /|       ")
+    print("    | |           | |        ")
+    print("    | I I I I I I I |        ")
+    print("    |  I I I I I I  |        ")
+    print("|___    IIIIIIII    ___|    ")
+    print("     \_           _/         ")
+    print("       \_________/           ")
 
 def pede_chute():
     chute = input("Qual a letra: ")
