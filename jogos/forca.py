@@ -15,7 +15,7 @@ def jogar():
     acertou = False
     erros = 0 
     tentativas = 7
-    print("numero de tentativas",tentativas)
+    #print("numero de tentativas",tentativas)
 
     input_dicas = dicas(palavra_secreta,letras_acertadas)
 
