@@ -26,14 +26,14 @@ class Conta:
         self.__saldo -= valor
     
     #Getters e Setters
-    def devolve_saldo(self):
+    def get_saldo(self):
         return self.__saldo
     
-    def devolve_titular(self):
-        pass
+    def get_titular(self):
+        return self.__titular
 
-    def devolve_titular(self):
-        pass
+    def get_limite(self):
+        return self.__limite
 
 
 
@@ -59,6 +59,6 @@ conta3 = Conta(3, "Sicrano", 2000.0, 2000.0)
 #conta2.extrato()
 #conta3.extrato()
 
-
-
-
+print("Nome:",conta1.get_titular())
+print("Saldo:",conta1.get_saldo())
+print("Limite:",conta1.get_limite())
