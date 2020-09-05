@@ -35,6 +35,8 @@ class Conta:
     def get_limite(self):
         return self.__limite
 
+    def set__limite(self, limite):
+        self.__limite = limite
 
 
 #conta1 é uma referência na memória para a classe(objeto) Conta
