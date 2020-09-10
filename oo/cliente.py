@@ -8,10 +8,12 @@ class Cliente:
         print('chamando get @property')
         return self.__nome.title()
 
-    @property
+    @nome.setter
     def nome(self, nome):
         print('chamando set @property')
-        return self.__nome = nome
+        self.__nome = nome
 
 cliente = Cliente("alex")
+print(cliente.nome)
+cliente.nome = "Claudia"
 print(cliente.nome)
