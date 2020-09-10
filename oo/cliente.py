@@ -5,12 +5,13 @@ class Cliente:
 
     @property
     def nome(self):
-        print('chamando @property')
+        print('chamando get @property')
         return self.__nome.title()
 
     @property
     def nome(self, nome):
-        return self.__nome.title()
-        
+        print('chamando set @property')
+        return self.__nome = nome
+
 cliente = Cliente("alex")
 print(cliente.nome)
