@@ -1,5 +1,5 @@
 class Conta:
-
+    
     def __init__(self, numero, titular, saldo, limite):
         # Atributos são caracteristicas que o objeto tem.
         print("Construindo objeto...{}".format(self)) 
@@ -20,11 +20,17 @@ class Conta:
     def transfere(self, valor, destino):
         self.saca(valor)
         destino.deposita(valor)
-        pass
+    
+    def pode_sacar(self, valor_a_sacar):
+        valor_disponivel_a_sacar = self.__saldo + self.limite
+        return valor_a_sacar <= valor_disponivel_a_sacar
 
     def saca(self, valor):
-        self.__saldo -= valor
-    
+        if (self.pode_sacar(valor)):
+            self.__saldo -= valor
+        else:
+            print(f"O valor {valor} ultrapassou o limite da conta {self.limite}")
+
     #Getters e Setters
     def get_saldo(self):
         return self.__saldo
@@ -32,10 +38,12 @@ class Conta:
     def get_titular(self):
         return self.__titular
 
-    def get_limite(self):
+    @property
+    def limite(self):
         return self.__limite
-
-    def set__limite(self, limite):
+    
+    @limite.setter
+    def limite(self, limite):
         self.__limite = limite
 
 
@@ -63,4 +71,9 @@ conta3 = Conta(3, "Sicrano", 2000.0, 2000.0)
 
 print("Nome:",conta1.get_titular())
 print("Saldo:",conta1.get_saldo())
-print("Limite:",conta1.get_limite())
+print("Limite:",conta1.limite)
+conta1.limite = 500
+print("altera limite:", conta1.limite)
+conta1.saca(30)
+conta1.saca(550)
+print("Saldo:",conta1.get_saldo())
