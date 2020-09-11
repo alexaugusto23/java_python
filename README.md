@@ -59,6 +59,24 @@ __Por: Alexsandro Augusto Ignácio e instrutor | Nico Steppat | Alura__
 * Usando Propriedades
 * Métodos privados e estáticos
 
+# Curso Alura - Python 3 parte 4: Avançando na orientação a objetos
+__Por: Alexsandro Augusto Ignácio e instrutor | Nico Steppat | Alura__
+
+* Entenda o que é Duck Typing e para que serve
+* Crie classes abstratas e use herança múltipla
+* Aprenda sobre o modelo de dados do Python
+* Conheça os Mixin e Extensão de classes
+* Saiba a diferença entre __str__ e __repr__
+
+### __Conhecimentos do curso__
+
+* Relembrando classes e objetos Ver primeiro vídeo
+* Removendo duplicação com herança
+* Reduzindo ifs com polimorfismo
+* Quando não usar herança
+* Duck Typing e um modelo de dados
+* Herança múltipla
+
 <p align="center">
   <img width="660" height="180" src="https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif">
 </p>
