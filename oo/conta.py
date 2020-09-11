@@ -49,6 +49,10 @@ class Conta:
     @staticmethod
     def codigo_banco():
         return "001"
+    
+    @staticmethod
+    def codigos_banco():
+        return {'BB':'001','CAIXA':'104','BRADESCO':'237'}
 
 #conta1 é uma referência na memória para a classe(objeto) Conta
 conta1 = Conta(1,"Alex", 30.00, 400.00)
@@ -78,5 +82,8 @@ print("Limite:",conta1.limite)
 conta1.limite = 500
 print("altera limite:", conta1.limite)
 conta1.saca(30)
-conta1.saca(550)
+conta1.saca(100)
 print("Saldo:",conta1.get_saldo())
+print(f"Limite atual {conta1.limite}")
+# print(Conta.codigo_banco())
+# print(Conta.codigos_banco())
