@@ -6,5 +6,9 @@ argumentosUrl = ExtratoArgumentosUrl(url)
 #print(argumentosUrl)
 
 moedaOrigem, moedaDestino = argumentosUrl.extrai_argumentos()
-print(moedaDestino,moedaOrigem)
+valor = argumentosUrl.extrai_valor()
+print(moedaDestino,moedaOrigem, valor)
+
+
+
 

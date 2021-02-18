@@ -6,7 +6,7 @@ class ExtratoArgumentosUrl:
 
     @staticmethod
     def url_eh_valida(url):
-        if url:
+        if url and url.startswith("https://www.bytebank.com.br"):
             return True
         else:
             return False
@@ -42,3 +42,9 @@ class ExtratoArgumentosUrl:
     def troca_moeda_origem(self):
         self.url = self.url.replace("moedadestino","real", 1)
         #print(self.url)
+    
+    def extrai_valor(self):
+        busca_valor = "valor="
+        indice_inicial_valor = self.encontra_ind_inicial(busca_valor)
+        valor = self.url[indice_inicial_valor:]
+        return valor

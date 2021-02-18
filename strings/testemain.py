@@ -1,5 +1,5 @@
 url = "https://www.bytebank.com.br/cambio?moedaorigem=real&moedadestino=dolar&valor=1500"
-
+'''
 # métodos find, split, replace
 
 index = url.find("=")
@@ -50,3 +50,22 @@ banco1 = "bytebank"
 banco2 = "Bytebank".upper()
 print(banco1, ' - ', banco2)
 print(banco1 == banco2)
+'''
+url_byte_bank = "https://bytebank.com"
+url1          = "https://buscasites.com/busca?q=https://bytebank.com"
+url2          = "https://bitebank.com.br"
+url3          = "https://bytebank.com/cambio/teste/teste"
+
+print(url3.find(url_byte_bank))
+print(url2.startswith(url_byte_bank))
+
+
+
+
+
+
+
+
+
+
+
