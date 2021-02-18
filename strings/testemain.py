@@ -1,6 +1,6 @@
 url = "https://www.bytebank.com.br/cambio?moedaorigem=real&moedadestino=dolar&valor=1500"
 
-# métodos find, split
+# métodos find, split, replace
 
 index = url.find("=")
 print(index)
@@ -30,3 +30,23 @@ else:
 index_inicio  = url.find("moedadestino") + len("moedadestino") + 1
 index_final = url.find("&", 52)
 print(url[index_inicio:index_final],' ', index_inicio, ' ', index_final)
+
+
+nome       = 'Eren Yeager'
+tamanho = len(nome)
+indice      = nome.find('Eren')
+print(indice)
+print(nome[indice])
+print(tamanho)
+print(nome[indice:tamanho])
+
+string_replace = "bytebank"
+string_nova = string_replace.replace("byte","alex",1)
+print(string_replace)
+print(string_nova)
+
+print()
+banco1 = "bytebank"
+banco2 = "Bytebank".upper()
+print(banco1, ' - ', banco2)
+print(banco1 == banco2)
