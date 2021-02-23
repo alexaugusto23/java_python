@@ -56,16 +56,11 @@ url1          = "https://buscasites.com/busca?q=https://bytebank.com"
 url2          = "https://bitebank.com.br"
 url3          = "https://bytebank.com/cambio/teste/teste"
 
-print(url3.find(url_byte_bank))
-print(url2.startswith(url_byte_bank))
+#print(url3.find(url_byte_bank))
+#print(url2.startswith(url_byte_bank))
 
-
-
-
-
-
-
-
-
-
+#string = "bytebank"
+#print(len(string))
+#x = 200
+#print(len(x)) 
 
