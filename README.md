@@ -77,6 +77,10 @@ __Por: Alexsandro Augusto Ignácio e instrutor | Nico Steppat | Alura__
 * Duck Typing e um modelo de dados
 * Herança múltipla
 
+# Curso Alura - Python 3 parte 5: 
+
+
+
 <p align="center">
   <img width="660" height="180" src="https://github.com/alexaugusto23/python_alura/blob/master/img/loading.gif">
 </p>
