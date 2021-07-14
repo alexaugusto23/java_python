@@ -5,19 +5,20 @@ url_parametros = url[ind_interrogacao+1:]
 #print(f"{url_parametros}")
 # url_parametros = url[ind_interrogacao+1:len(url)]
 
-parametro_busca = 'moedaOrigem'
-indice_parametro = url_parametros.find(parametro_busca)
-indice_valor = indice_parametro + len(parametro_busca) + 1
-moedaOrigem = url_parametros[indice_valor:]
-print(f"{url_parametros}")
-print(f"{indice_parametro}")
-print(f"len: {indice_valor}")
-print(moedaOrigem)
+parametro_busca_origem = 'moedaOrigem'
+parametro_busca_destino = 'moedaDestino'
+parametro_busca_e = '&'
+parametro_busca_equals = '='
 
-parametro_busca = 'moedaDestino'
-parametro_busca_dois = '&'
-indice_parametro = url_parametros.find(parametro_busca)
-indice_parametro_final = url_parametros.find(parametro_busca_dois)
-indice_valor = len(parametro_busca) + 1
+indice_parametro = url_parametros.find(parametro_busca_origem)
+indice_valor = indice_parametro + len(parametro_busca_origem) + 1
+moedaOrigem = url_parametros[indice_valor:]
+print(f"Moeda Origem: {moedaOrigem}")
+
+
+indice_parametro = url_parametros.find(parametro_busca_destino)
+indice_parametro_final = url_parametros.find(parametro_busca_e)
+indice_valor = len(parametro_busca_destino) + 1
 moedaDestino = url_parametros[indice_valor:indice_parametro_final]
-print(moedaDestino)
+print(f"Moeda Destino: {moedaDestino}")
+
