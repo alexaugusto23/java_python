@@ -1,5 +1,8 @@
 {
     "python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python37_64\\python.exe",
-    "python.analysis.extraPaths": ["C:\\git\\python_alura\\strings"],
-    "python.autoComplete.extraPaths": ["C:\\git\\python_alura\\strings"]
+    "python.analysis.extraPaths": [
+        "C:\\git\\python_alura\\",
+        "./Python parte 04 String em Python Extraindo informações de uma URL/atual"
+    ],
+    "python.autoComplete.extraPaths": ["C:\\git\\python_alura\\"]
 }

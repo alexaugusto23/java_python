@@ -1,21 +1,22 @@
-url = "https://bytebank.com/cambio?moedaDestino=dolar&moedaOrigem=real"
 
+from extrator_de_url import ExtratorURL 
+from conversor_de_moeda import conv_dolar_real, conv_real_dolar
 
-# Validação da URL
-if url == None:
-    raise ValueError("A URL None") 
-elif url == "":
-    raise ValueError("A URL está vazia") 
+url = "https://bytebank.com/cambio?quantidade=100&moedaDestino=dolar&moedaOrigem=real"
+extrator_url = ExtratorURL(url)
 
+tx_real = 0.1968503937007874
+tx_dolar = 5.08  
+moeda_origem = extrator_url.get_valor_parametro("moedaOrigem")
+moeda_destino = extrator_url.get_valor_parametro("moedaDestino")
+quantidade = extrator_url.get_valor_parametro("quantidade")
+
+if moeda_origem.lower() == 'real' and moeda_destino.lower() == 'dolar':
+    valor =  conv_real_dolar(quantidade, tx_dolar)
+    print(f"{round(valor, 2)}")
+elif moeda_origem.lower() == 'dolar' and moeda_destino.lower() == 'real':
+    valor =  conv_dolar_real(quantidade, tx_real)
+    print(f"{round(valor, 2)}")
 else:
-    parametro_de_busca = 'moedaDestino'
-    indice_de_parametro = url.find(parametro_de_busca)
-    indice_de_valor = indice_de_parametro + len(parametro_de_busca) + 1
-    indice_e_comercial = url.find('&', indice_de_valor)
-    valor = url[indice_de_valor:indice_e_comercial]
+    print(f"Câmbio de {moeda_origem} para {moeda_destino} não está disponível.")
 
-    if indice_e_comercial == -1:
-        valor = url[indice_de_valor:]
-    else:
-        valor = url[indice_de_valor:indice_e_comercial]
-    print(valor)
