@@ -1,12 +1,10 @@
-from Cpf import Cpf
+from cpf_cnpj_refatorado import Documento
 
-cpf = 15616987913
-objeto_cpf = Cpf(cpf)
-print(objeto_cpf)
+cpf = "36059729851"
+cnpj = "35379838000112"
 
-
-
-
+validador = Documento.cria_documento(cnpj)
+print(validador)
 
 
 
