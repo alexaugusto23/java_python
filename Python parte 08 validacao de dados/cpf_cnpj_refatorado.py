@@ -28,9 +28,7 @@ class DocCpf:
     
     def __str__(self):
         return self.formata()
-    
-
-
+  
 class DocCnpj:
     def __init__(self, documento) -> None:
         if self.valida(documento):
@@ -48,6 +46,3 @@ class DocCnpj:
     
     def __str__(self):
         return self.formata()
-
-
-
