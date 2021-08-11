@@ -24,6 +24,15 @@ print(resposta)
 resposta = re.search(padrao, texto)
 print(resposta.group())
 
+# Agrupamento dos números com ().
+# Molde (xx)aaaa-wwww
+padrao = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
+texto = "552126481234"
+resposta = re.findall(padrao, texto)
+print(resposta)
+resposta = re.search(padrao, texto).group()
+print(resposta)
+
 
 
 
