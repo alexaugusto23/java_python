@@ -33,8 +33,16 @@ print(resposta)
 resposta = re.search(padrao, texto).group()
 print(resposta)
 
+# Excercicio
+email_um = 'rodrigo@gmail.com'
+email_dois = 'rodrigao1993@4shared.org.uk'
+email_tres = 'rodrigo@rodrigo.br'
+email_quatro = 'rodrigo123@python.py.br'
+lista_email = [email_um, email_dois, email_tres, email_quatro]
+padrao = "(\w{2,50})(@)(\w{2,15})(\.)([a-z]{2,3})(\.)?([a-z]{2,3})?"
 
-
-
-
-
+for ele in lista_email:
+    resposta = re.search(padrao, ele)
+    print(resposta.group())
+    resposta = re.findall(padrao, ele)
+    print(resposta)
