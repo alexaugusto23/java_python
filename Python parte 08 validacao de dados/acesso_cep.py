@@ -32,3 +32,15 @@ class BuscaEndereco:
             return requisicao.text
         else:
             return 'Formato não existe'
+
+    def acessa_via_cep_fotmat_data(self):
+        cep = self.cep
+        formato_file = "json"
+        url = f"https://viacep.com.br/ws/{cep}/{formato_file}"
+        requisicao = requests.get(url)
+        dados = requisicao.json()
+        return (
+            dados['bairro'],
+            dados['localidade'],
+            dados['uf']
+        )
