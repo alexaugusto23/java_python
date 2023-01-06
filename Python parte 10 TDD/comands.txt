@@ -1,0 +1,4 @@
+# Cria ambiente virtual
+py -m venv venv
+
+# Acessa o ambiente
