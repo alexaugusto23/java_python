@@ -4,5 +4,7 @@
         "C:\\git\\python_alura\\",
         "./Python parte 04 String em Python Extraindo informações de uma URL/atual"
     ],
-    "python.autoComplete.extraPaths": ["C:\\git\\python_alura\\"]
+    "python.autoComplete.extraPaths": [
+        "C:\\git\\python_alura\\"
+    ]
 }
